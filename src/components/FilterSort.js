@@ -1,14 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const FilterSort = () => {
-  const [RestaurantCount, setRestaurantCount] = useState(20);
-
+const FilterSort = ({ resCount }) => {
   return (
     <div className="flex justify-between shadow-sm m-2 mt-5 p-3  text-xs">
       <div>
-        <h1 className="text-lg font-bold">{RestaurantCount} restaurants</h1>
+        <h1 className="text-lg font-bold">{resCount} restaurants</h1>
       </div>
-      <div className="flex">
+      <div className="flex shadow-sm">
         <h1 className="px-2 cursor-pointer">Delivery Time</h1>
         <h1 className="px-2 cursor-pointer">Rating</h1>
         <h1 className="px-2 cursor-pointer">Cost:Low to High</h1>

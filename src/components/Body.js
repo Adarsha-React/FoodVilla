@@ -16,9 +16,10 @@ const Body = () => {
     const json = await data.json();
     setRestaurants(json?.data?.cards[0]?.data?.data?.cards);
   };
+
   return (
     <div className="">
-      <FilterSort />
+      <FilterSort resCount={restaurants.length} />
       <MainContainer restaurants={restaurants} />
       <Footer />
     </div>

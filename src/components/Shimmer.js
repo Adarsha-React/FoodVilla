@@ -1,9 +1,11 @@
 const Shimmer = () => {
   return (
     <div className="flex flex-wrap m-8 p-2">
-      {[...Array(10)].map((x, i) => (
+      {[...Array(15)].map((x, i) => (
         <div key={i}>
-          <div className="shadow-md bg-slate-50 border border-1 m-2 p-4 w-44 h-36"></div>
+          <div className="shadow-sm bg-zinc-50 border border-1 m-2 p-4 w-44 h-36"></div>
+          <div className="shadow-sm bg-zinc-50 border border-1 m-2 p-1 w-36 h-4"></div>
+          <div className="shadow-sm bg-zinc-50 border border-1 m-2 p-1 w-28 h-4"></div>
         </div>
       ))}
     </div>
