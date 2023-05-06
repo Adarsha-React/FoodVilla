@@ -5,7 +5,9 @@ import HelpImg from "../assets/images/help.png";
 const Title = () => {
   return (
     <div>
-      <img src={AppLogo} alt="appLogo" className="w-20 h-12 cursor-pointer" />
+      <a href="/">
+        <img src={AppLogo} alt="appLogo" className="w-20 h-12 cursor-pointer" />
+      </a>
     </div>
   );
 };
