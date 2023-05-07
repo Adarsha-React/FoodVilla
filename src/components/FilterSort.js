@@ -2,17 +2,28 @@ import { useEffect, useState } from "react";
 
 const FilterSort = ({ resCount }) => {
   return (
-    <div className="flex justify-between shadow-sm m-2 mt-5 p-3  text-xs">
-      <div>
-        <h1 className="text-lg font-bold">{resCount} restaurants</h1>
+    <>
+      <div className="grid grid-flow-col justify-around text-xs pt-5">
+        <div>
+          <h1 className="text-lg font-bold">{resCount} restaurants</h1>
+        </div>
+        <div className="flex">
+          <h1 className="px-2 pt-2 cursor-pointer text-[10px] font-mono hover:font-semibold">
+            Delivery Time
+          </h1>
+          <h1 className="px-2 pt-2 cursor-pointer text-[10px] font-mono hover:font-semibold">
+            Rating
+          </h1>
+          <h1 className="px-2 pt-2 cursor-pointer text-[10px] font-mono hover:font-semibold">
+            Cost:Low to High
+          </h1>
+          <h1 className="px-2 pt-2 cursor-pointer text-[10px] font-mono hover:font-semibold">
+            Cost:High to Low
+          </h1>
+        </div>
       </div>
-      <div className="flex shadow-sm">
-        <h1 className="px-2 cursor-pointer">Delivery Time</h1>
-        <h1 className="px-2 cursor-pointer">Rating</h1>
-        <h1 className="px-2 cursor-pointer">Cost:Low to High</h1>
-        <h1 className="px-2 cursor-pointer">Cost:High to Low</h1>
-      </div>
-    </div>
+      <hr className="w-[68%] ml-[201px] h-px bg-gray-200 border-0 "></hr>
+    </>
   );
 };
 
