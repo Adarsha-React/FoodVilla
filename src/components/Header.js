@@ -4,6 +4,7 @@ import HelpImg from "../assets/images/help.png";
 import SearchImg from "../assets/images/searchIcon.png";
 import { useState } from "react";
 import useFetchRestaurants from "../utilities/useFetchRestaurants";
+import { Link } from "react-router-dom";
 
 const Title = () => {
   return (
@@ -41,19 +42,19 @@ const Header = () => {
                 className="cursor-pointer hover:text-orange-300 font-semibold text-xs text-slate-600"
                 onClick={() => filterRestaurants(searchText, restaurants)}
               >
-                Search
+                <Link to="/searchPage">Search</Link>
               </button>
             </li>
             <li className="flex px-7 py-2 pt-3 cursor-pointer hover:text-orange-300 font-semibold text-xs text-slate-600">
               <img src={HelpImg} className="w-5 h-5 mx-2" />
-              Help
+              <Link to="help"> Help </Link>
             </li>
             <li className="flex cursor-pointer pt-3 hover:text-orange-300 px-7 font-semibold text-xs text-slate-600">
               <img src={LoginImg} className="w-4 h-5 mx-2" />
-              Sign In
+              <Link to="/signIn">Sign In </Link>
             </li>
             <li className="px-7 pt-3 cursor-pointer hover:text-orange-300 font-semibold text-xs text-slate-600">
-              🛒 Cart
+              <Link to="/cart"> 🛒 Cart </Link>
             </li>
           </ul>
         </div>

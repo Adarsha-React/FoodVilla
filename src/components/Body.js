@@ -12,7 +12,6 @@ const Body = () => {
     <div className="">
       <FilterSort resCount={restaurants.length} />
       <MainContainer restaurants={restaurants} />
-      <Footer />
     </div>
   );
 };
