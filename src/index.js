@@ -1,15 +1,17 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Body from "./components/Body";
 import Header from "./components/Header";
-import Help from "./components/Help";
+//import Help from "./components/Help";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Footer from "./components/Footer";
 import Search from "./components/Search";
 import SignIn from "./components/SignIn";
 import Cart from "./components/Cart";
+
+const Help = lazy(() => import("./components/Help"));
 
 function AppLayout() {
   return (
@@ -33,7 +35,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/help",
-        element: <Help />,
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Help />
+          </Suspense>
+        ),
       },
       {
         path: "/searchPage",
