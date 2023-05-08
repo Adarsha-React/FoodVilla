@@ -1,6 +1,7 @@
 import AppLogo from "../assets/images/Foodvilla.png";
 import LoginImg from "../assets/images/login.png";
 import HelpImg from "../assets/images/help.png";
+import NamasteLogo from "../assets/images/namaste.png";
 import SearchImg from "../assets/images/searchIcon.png";
 import { useState } from "react";
 import useFetchRestaurants from "../utilities/useFetchRestaurants";
@@ -11,9 +12,9 @@ const Title = () => {
     <div>
       <a href="/">
         <img
-          src={AppLogo}
+          src={NamasteLogo}
           alt="appLogo"
-          className="w-16 h-10 m-2 cursor-pointer"
+          className="w-16 h-12 m-2 cursor-pointer"
         />
       </a>
     </div>
