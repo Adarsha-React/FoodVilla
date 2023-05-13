@@ -10,6 +10,8 @@ import Footer from "./components/Footer";
 import Search from "./components/Search";
 import SignIn from "./components/SignIn";
 import Cart from "./components/Cart";
+import RestaurantMenu from "./components/RestaurantMenu";
+import HelpDetails from "./components/HelpDetails";
 
 const Help = lazy(() => import("./components/Help"));
 
@@ -34,12 +36,18 @@ const appRouter = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/help",
+        path: "/support",
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
             <Help />
           </Suspense>
         ),
+        children: [
+          {
+            path: "issues/:supportType",
+            element: <HelpDetails />,
+          },
+        ],
       },
       {
         path: "/searchPage",
@@ -52,6 +60,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/restaurant/:resId",
+        element: <RestaurantMenu />,
       },
     ],
   },

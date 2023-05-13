@@ -12,7 +12,7 @@ const Title = () => {
     <div>
       <a href="/">
         <img
-          src={NamasteLogo}
+          src={AppLogo}
           alt="appLogo"
           className="w-16 h-12 m-2 cursor-pointer"
         />
@@ -48,7 +48,7 @@ const Header = () => {
             </li>
             <li className="flex px-7 py-2 pt-3 cursor-pointer hover:text-orange-300 font-semibold text-xs text-slate-600">
               <img src={HelpImg} className="w-5 h-5 mx-2" />
-              <Link to="help"> Help </Link>
+              <Link to="/support"> Help </Link>
             </li>
             <li className="flex cursor-pointer pt-3 hover:text-orange-300 px-7 font-semibold text-xs text-slate-600">
               <img src={LoginImg} className="w-4 h-5 mx-2" />

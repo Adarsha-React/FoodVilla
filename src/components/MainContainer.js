@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 
@@ -9,7 +10,9 @@ const MainContainer = ({ restaurants }) => {
       <div className="grid grid-cols-4">
         {restaurants.map((restaurant) => (
           <div key={restaurant?.data?.id}>
-            <RestaurantCard restaurant={restaurant?.data} />
+            <Link to={"/restaurant/" + restaurant?.data?.id}>
+              <RestaurantCard restaurant={restaurant?.data} />
+            </Link>
           </div>
         ))}
       </div>
