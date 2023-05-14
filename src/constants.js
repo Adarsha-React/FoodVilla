@@ -20,3 +20,6 @@ export const PRE_SEARCH_LINK =
 
 export const ALL_SEARCH_LINK =
   "ttps://www.swiggy.com/dapi/restaurants/search/suggest?lat=12.9234947&lng=77.6851069&str=";
+
+export const SUG_SEARCH_LINK =
+  "https://www.swiggy.com/dapi/restaurants/search/suggest?lat=12.9234947&lng=77.6851069&str=";
