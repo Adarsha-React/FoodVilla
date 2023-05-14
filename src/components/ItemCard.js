@@ -3,8 +3,8 @@ import { ITEM_CDN_LINK } from "../constants";
 const ItemCard = ({ itemCard }) => {
   return (
     <>
-      <div className="pt-5 flex justify-between shadow-sm pb-2">
-        <div className="">
+      <div className="pt-5 flex justify-between shadow-sm pb-2 w-4/5">
+        <div className="w-3/4">
           <h1 className="font-semibold text-xs">
             {itemCard?.card?.info?.name}
           </h1>

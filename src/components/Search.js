@@ -1,7 +1,9 @@
+import SearchContainer from "./SearchContainer";
+
 const Search = () => {
   return (
-    <div>
-      <h1>Search Page</h1>
+    <div className="pt-5 ">
+      <SearchContainer />
     </div>
   );
 };

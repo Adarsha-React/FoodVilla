@@ -43,7 +43,7 @@ const RestaurantMenu = () => {
               {restaurant?.areaName}, {restaurant?.sla?.lastMileTravelString}
             </h1>
           </div>
-          <div className="shadow-md p-2 py-1 w-230 rounded-md bg-slate-100">
+          <div className="shadow-md p-2 py-1 rounded-md bg-slate-100">
             <h1 className="text-[9px] font-bold py-2">
               ⭐{" " + restaurant?.avgRating}
             </h1>

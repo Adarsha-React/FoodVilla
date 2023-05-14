@@ -25,7 +25,6 @@ const HelpDetails = () => {
     const data = await fetch(SUPPORT_TYPE_CDN_LINK + supportType + "?");
     const json = await data.json();
     setSupportTypeData(json?.data?.issues?.data);
-    // console.log(supportTypeData);
   };
 
   //if (!setSupportTypeData) return null;
@@ -34,10 +33,12 @@ const HelpDetails = () => {
     <Shimmer />
   ) : (
     <div>
+      <h1 className="font-bold text-md capitalize">{supportType}</h1>
       {supportTypeData.map((supportData) => (
-        <li className="list-none" key={supportData?.id}>
-          {supportData?.title}
-        </li>
+        <div key={supportData?.id}>
+          <h1 className="text-xs py-4">{supportData?.title}</h1>
+          <hr />
+        </div>
       ))}
     </div>
   );

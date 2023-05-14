@@ -14,3 +14,9 @@ export const SUPPORT_CDN_LINK = "https://www.swiggy.com/dapi/support?";
 
 export const SUPPORT_TYPE_CDN_LINK =
   "https://www.swiggy.com/dapi/support/issues/";
+
+export const PRE_SEARCH_LINK =
+  "https://www.swiggy.com/dapi/landing/PRE_SEARCH?lat=12.9234947&lng=77.6851069";
+
+export const ALL_SEARCH_LINK =
+  "ttps://www.swiggy.com/dapi/restaurants/search/suggest?lat=12.9234947&lng=77.6851069&str=";
