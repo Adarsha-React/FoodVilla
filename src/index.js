@@ -17,7 +17,7 @@ const Help = lazy(() => import("./components/Help"));
 
 function AppLayout() {
   return (
-    <div>
+    <div className="min-h-screen">
       <Header />
       <Outlet />
       <Footer />

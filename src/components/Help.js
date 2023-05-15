@@ -33,11 +33,11 @@ const Help = () => {
             <div className="p-2">
               {supportTypes.map((supprtType, index) => (
                 <div key={index} className="list-none text-left">
-                  <li className="py-2 hover:bg-white font-semibold text-xs p-2 rounded-md cursor-pointer">
-                    <Link to={"/support/issues/" + supprtType.type}>
+                  <Link to={"/support/issues/" + supprtType.type}>
+                    <li className="py-2 hover:bg-white font-semibold text-xs p-2 rounded-md cursor-pointer">
                       {supprtType.title}
-                    </Link>
-                  </li>
+                    </li>
+                  </Link>
                 </div>
               ))}
             </div>

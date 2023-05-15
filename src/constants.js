@@ -4,6 +4,9 @@ export const FETCH_RESTAURANTS_API =
 export const IMAGE_CDN_LINK =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
+export const SEARCH_RES_IMG_CDN =
+  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_112,h_112,c_fill/";
+
 export const FETCH_RESTAURANT_DATA =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9234947&lng=77.6851069&restaurantId=";
 
