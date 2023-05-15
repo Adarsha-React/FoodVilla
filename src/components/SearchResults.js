@@ -4,7 +4,7 @@ const SearchResults = ({ restaurants, searchText }) => {
   if (searchText.length <= 1) {
     restaurants.length = 0;
   }
-  console.log(restaurants);
+  // console.log(restaurants);
 
   return (
     <div className="pt-5">

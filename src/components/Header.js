@@ -1,5 +1,4 @@
 import AppLogo from "../assets/images/Foodvilla.png";
-import AppLogo1 from "../assets/images/FoodVilla1.png";
 import LoginImg from "../assets/images/login.png";
 import HelpImg from "../assets/images/help.png";
 import NamasteLogo from "../assets/images/namaste.png";

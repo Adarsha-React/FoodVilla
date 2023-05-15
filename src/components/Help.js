@@ -14,13 +14,13 @@ const Help = () => {
     const data = await fetch(SUPPORT_CDN_LINK);
     const json = await data.json();
     setSupportTypes(json?.data?.issueTypes?.data);
-    console.log(supportTypes);
+    //console.log(supportTypes);
   };
 
   return supportTypes.length === 0 ? (
     <h1>Loading...</h1>
   ) : (
-    <div className="bg-cyan-700">
+    <div className="bg-cyan-700 ">
       <div className="p-5 pt-8 mx-40">
         <div className="mb-9 mt-9">
           <h1 className="text-white font-bold">Help & Support</h1>
