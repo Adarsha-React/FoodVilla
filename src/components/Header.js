@@ -1,4 +1,5 @@
 import AppLogo from "../assets/images/Foodvilla.png";
+import AppLogo1 from "../assets/images/deliveryQube.jpg";
 import LoginImg from "../assets/images/login.png";
 import HelpImg from "../assets/images/help.png";
 import NamasteLogo from "../assets/images/namaste.png";
@@ -12,9 +13,9 @@ const Title = () => {
     <div>
       <a href="/">
         <img
-          src={AppLogo}
+          src={AppLogo1}
           alt="appLogo"
-          className="w-16 h-12 m-2 cursor-pointer"
+          className="w-18 h-14 m-2 cursor-pointer"
         />
       </a>
     </div>
