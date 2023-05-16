@@ -2,11 +2,12 @@ import AppLogo from "../assets/images/Foodvilla.png";
 import AppLogo1 from "../assets/images/deliveryQube.jpg";
 import LoginImg from "../assets/images/login.png";
 import HelpImg from "../assets/images/help.png";
-import NamasteLogo from "../assets/images/namaste.png";
 import SearchImg from "../assets/images/searchIcon.png";
 import { useState } from "react";
 import useFetchRestaurants from "../utilities/useFetchRestaurants";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import UserContext from "./UserContext";
 
 const Title = () => {
   return (
@@ -15,7 +16,7 @@ const Title = () => {
         <img
           src={AppLogo1}
           alt="appLogo"
-          className="w-18 h-14 m-2 cursor-pointer"
+          className="w-18 h-12 cursor-pointer"
         />
       </a>
     </div>
@@ -24,6 +25,7 @@ const Title = () => {
 
 const Header = () => {
   const [searchText, setSearchText] = useState("");
+  const { user } = useContext(UserContext);
 
   const restaurants = useFetchRestaurants();
   function filterRestaurants(searchText, restaurants) {
@@ -34,7 +36,7 @@ const Header = () => {
 
   return (
     <div className="">
-      <div className="grid grid-flow-col justify-around mx-2 shadow-md">
+      <div className="grid grid-flow-col justify-around shadow-md h-14">
         <Title />
         <div>
           <ul className="flex py-2">

@@ -12,7 +12,7 @@ const RestaurantCard = ({ restaurant }) => {
   } = restaurant;
   //console.log(IMAGE_CDN_LINK + cloudinaryImageId);
   return (
-    <div className="w-52 h-64 shadow-sm hover:shadow-md hover:border border-1 cursor-pointer p-4  mt-3">
+    <div className="w-52 h-64 shadow-sm hover:shadow-md hover:border border-1 cursor-pointer p-4 m-2">
       <img
         src={IMAGE_CDN_LINK + cloudinaryImageId}
         alt="resImage"
