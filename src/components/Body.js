@@ -6,11 +6,9 @@ import useFetchRestaurants from "../utilities/useFetchRestaurants";
 
 const Body = () => {
   const restaurants = useFetchRestaurants();
-
-  console.log(restaurants);
   return (
     <div className="">
-      <FilterSort resCount={restaurants.length} />
+      <FilterSort resCount={restaurants?.length} />
       <MainContainer restaurants={restaurants} />
     </div>
   );

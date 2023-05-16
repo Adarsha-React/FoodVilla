@@ -25,7 +25,6 @@ const Title = () => {
 
 const Header = () => {
   const [searchText, setSearchText] = useState("");
-  const { user } = useContext(UserContext);
 
   const restaurants = useFetchRestaurants();
   function filterRestaurants(searchText, restaurants) {
