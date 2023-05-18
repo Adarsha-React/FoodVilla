@@ -7,10 +7,10 @@ import useFetchRestaurants from "../utilities/useFetchRestaurants";
 const Body = () => {
   const restaurants = useFetchRestaurants();
   return (
-    <div className="">
+    <>
       <FilterSort resCount={restaurants?.length} />
       <MainContainer restaurants={restaurants} />
-    </div>
+    </>
   );
 };
 

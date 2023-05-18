@@ -27,7 +27,7 @@ const RestaurantItemCategory = ({ itemCategory }) => {
       {isVisible && (
         <div className="">
           {itemCategory?.itemCards?.map((item) => (
-            <MenuItem key={item.card.info.id} item={item.card.info} />
+            <MenuItem key={item?.card?.info?.id} item={item?.card?.info} />
           ))}
         </div>
       )}

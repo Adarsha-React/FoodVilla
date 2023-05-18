@@ -6,8 +6,7 @@ import SearchImg from "../assets/images/searchIcon.png";
 import { useState } from "react";
 import useFetchRestaurants from "../utilities/useFetchRestaurants";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import UserContext from "./UserContext";
+import { useSelector } from "react-redux";
 
 const Title = () => {
   return (
@@ -25,6 +24,8 @@ const Title = () => {
 
 const Header = () => {
   const [searchText, setSearchText] = useState("");
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   const restaurants = useFetchRestaurants();
   function filterRestaurants(searchText, restaurants) {
@@ -57,7 +58,13 @@ const Header = () => {
               <Link to="/signIn">Sign In </Link>
             </li>
             <li className="px-7 pt-3 cursor-pointer hover:text-orange-300 font-semibold text-xs text-slate-600">
-              <Link to="/cart"> 🛒 Cart </Link>
+              <Link to="/cart">
+                <span className="bg-green-600 px-1.5 text-[9px] text-white rounded-t-sm hover:bg-orange-500">
+                  {cartItems.length}
+                </span>
+                {"  "}
+                Cart
+              </Link>
             </li>
           </ul>
         </div>

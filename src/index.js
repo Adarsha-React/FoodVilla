@@ -12,16 +12,20 @@ import SignIn from "./components/SignIn";
 import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantMenu";
 import HelpDetails from "./components/HelpDetails";
+import { Provider } from "react-redux";
+import store from "./utilities/store";
 
 const Help = lazy(() => import("./components/Help"));
 
 function AppLayout() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    <Provider store={store}>
+      <div className="min-h-screen">
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
+    </Provider>
   );
 }
 

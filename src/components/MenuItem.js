@@ -1,7 +1,16 @@
+import { useDispatch } from "react-redux";
 import { ITEM_CDN_LINK } from "../constants";
+import { addItem } from "../utilities/cartSlice";
 
 const MenuItem = ({ item }) => {
   // console.log(item);
+
+  const dispatch = useDispatch();
+
+  const addFoodItem = (item) => {
+    dispatch(addItem(item));
+  };
+
   return (
     <>
       <div className="flex justify-between w-5/6 py-5">
@@ -20,7 +29,10 @@ const MenuItem = ({ item }) => {
               alt="itemImg"
             />
             <div className="absolute top-0 bottom-0 left-0 right-0">
-              <button className="text-[7px] font-bold px-7 py-2 rounded-md  text-green-600 bg-slate-100 absolute -bottom-0.5 left-1/2 -translate-x-1/2 -translate-y-1/">
+              <button
+                onClick={() => addFoodItem(item)}
+                className="text-[7px] font-bold px-7 py-2 rounded-md  text-green-600 bg-slate-100 absolute -bottom-0.5 left-1/2 -translate-x-1/2 -translate-y-1/"
+              >
                 ADD
               </button>
             </div>
