@@ -3,6 +3,7 @@ import AppLogo1 from "../assets/images/deliveryQube.jpg";
 import LoginImg from "../assets/images/login.png";
 import HelpImg from "../assets/images/help.png";
 import SearchImg from "../assets/images/searchIcon.png";
+import searchLogo from "../assets/images/searchIcon1.png";
 import { useState } from "react";
 import useFetchRestaurants from "../utilities/useFetchRestaurants";
 import { Link } from "react-router-dom";
@@ -15,7 +16,7 @@ const Title = () => {
         <img
           src={AppLogo1}
           alt="appLogo"
-          className="w-18 h-12 cursor-pointer"
+          className="w-18 h-12 cursor-pointer bg-slate-50"
         />
       </a>
     </div>
@@ -35,8 +36,8 @@ const Header = () => {
   }
 
   return (
-    <div className="">
-      <div className="grid grid-flow-col justify-around shadow-md h-14">
+    <div className="phxadar">
+      <div className="grid grid-flow-col justify-around shadow-md bg-white h-14">
         <Title />
         <div>
           <ul className="flex py-2">

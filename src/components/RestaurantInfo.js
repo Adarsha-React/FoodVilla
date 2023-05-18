@@ -1,6 +1,14 @@
+import { useDispatch } from "react-redux";
 import { IMG_FEE_INFO_CDN } from "../constants";
+import { addRestuarant } from "../utilities/resInfoSlice";
 
 const RestaurantInfo = ({ restaurant }) => {
+  const dispatch = useDispatch();
+
+  if (restaurant) {
+    dispatch(addRestuarant(restaurant));
+  }
+
   return (
     <div>
       <div className="pt-5 flex justify-evenly pb-5">
