@@ -56,7 +56,7 @@ const Header = () => {
             </li>
             <li className="flex cursor-pointer pt-3 hover:text-orange-300 px-7 font-semibold text-xs text-slate-600">
               <img src={LoginImg} className="w-4 h-5 mx-2" />
-              <Link to="/signIn">Sign In </Link>
+              <Link to="/logInForm">Sign In </Link>
             </li>
             <li className="px-7 pt-3 cursor-pointer hover:text-orange-300 font-semibold text-xs text-slate-600">
               <Link to="/cart">

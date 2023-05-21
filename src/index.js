@@ -8,12 +8,12 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Footer from "./components/Footer";
 import Search from "./components/Search";
-import SignIn from "./components/SignIn";
 import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantMenu";
 import HelpDetails from "./components/HelpDetails";
 import { Provider } from "react-redux";
 import store from "./utilities/store";
+import LogInForm from "./components/LogInForm";
 
 const Help = lazy(() => import("./components/Help"));
 
@@ -58,8 +58,8 @@ const appRouter = createBrowserRouter([
         element: <Search />,
       },
       {
-        path: "/signIn",
-        element: <SignIn />,
+        path: "/logInForm",
+        element: <LogInForm />,
       },
       {
         path: "/cart",
