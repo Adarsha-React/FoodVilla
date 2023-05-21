@@ -4,9 +4,13 @@ const SearchResults = ({ restaurants, searchText }) => {
   if (searchText.length <= 1) {
     restaurants.length = 0;
   }
-  // console.log(restaurants);
+  console.log(restaurants);
 
-  return (
+  if (restaurants?.length === 0) return null;
+
+  return restaurants.length === 0 ? (
+    <h1>Loading search results</h1>
+  ) : (
     <div className="pt-5">
       {restaurants
         .filter((restaurant) => {
@@ -15,7 +19,7 @@ const SearchResults = ({ restaurants, searchText }) => {
             : restaurant?.text.toLowerCase().includes(searchText);
         })
         .map((restaurant) => (
-          <div key={restaurant.text} className="">
+          <div key={restaurant?.text} className="">
             <div className="flex flex-col items-center">
               <div className="flex w-2/5 relative cursor-pointer hover:bg-slate-100 py-2">
                 <img

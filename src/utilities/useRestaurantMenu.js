@@ -25,7 +25,7 @@ const useRestaurantMenu = (resId) => {
         item?.card?.card["@type"] === itemCategory ||
         item?.card?.card["@type"] === nestedItemCategory
       )
-        return item.card.card;
+        return item?.card?.card;
     });
 
     const modifiedData = {

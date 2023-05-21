@@ -28,7 +28,7 @@ const Header = () => {
 
   const cartItems = useSelector((store) => store.cart.items);
 
-  const restaurants = useFetchRestaurants();
+  const restaurantsInfo = useFetchRestaurants();
   function filterRestaurants(searchText, restaurants) {
     const filteredData = restaurants.filter((restaurant) =>
       restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
@@ -45,7 +45,9 @@ const Header = () => {
               <img src={SearchImg} alt="searchImage" className="w-7 py-2" />
               <button
                 className="cursor-pointer hover:text-orange-300 font-semibold text-xs text-slate-600"
-                onClick={() => filterRestaurants(searchText, restaurants)}
+                onClick={() =>
+                  filterRestaurants(searchText, restaurantsInfo.restaurants)
+                }
               >
                 <Link to="/searchPage">Search</Link>
               </button>
