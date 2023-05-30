@@ -29,3 +29,9 @@ export const ALL_SEARCH_LINK =
 
 export const SUG_SEARCH_LINK =
   "https://www.swiggy.com/dapi/restaurants/search/suggest?lat=12.9234947&lng=77.6851069&str=";
+
+export const CAROUSEL_IMG_CDN =
+  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/";
+
+export const CAROUSEL_DETAIL_CDN =
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9554201&lng=77.51567729999998&collection=";
